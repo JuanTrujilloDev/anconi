@@ -1,0 +1,30 @@
+
+{% extends 'base.html' %}
+{% load static %}
+
+
+
+{% block content %}
+
+{% include 'nav.html' %}
+
+{% include 'portafolio.html' %}
+
+{% include 'team.html' %}
+
+{% include 'marcas.html' %}
+
+{% include 'map.html' %}
+
+{% include 'contact.html' %}
+
+{% include 'footer.html' %}
+
+{% include 'jssor.html' %}
+{% block scriptnav %}
+<script>let navbar = document.querySelector('.navbar');</script>
+
+
+{% endblock scriptnav %}
+
+{% endblock content %}
