@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'anconi',
     'users',
     'blog',
+    'portfolio',
 ]
 
 MIDDLEWARE = [

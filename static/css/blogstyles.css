@@ -560,3 +560,10 @@
 .headerBlog a:hover{
   color:rgb(0, 0, 0)!important;
 }
+
+.active{
+  color:coral!important;
+}
+
+
+/* PORTFOLIO */

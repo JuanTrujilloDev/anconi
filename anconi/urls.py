@@ -22,4 +22,5 @@ urlpatterns = [
     path('', home, name="home-view"),
     path('users/', include('users.urls')),
     path('blog/', include('blog.urls')),
+    path('portfolio/', include('portfolio.urls')),
 ]
