@@ -1,0 +1,50 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0" />
+
+    <!-- Bootstrap CSS -->
+    {% include 'css.html' %}
+    
+    
+    <!-- Google fonts-->
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    <!--TOP HEADER-->
+    <div class="spinner-wrapper position-fixed text-center justify-content-center align-items-center">
+      <img src="{% static 'img/anconi.png' %}" class="loader-logo animate__animated animate__fadeInDown">
+      <img src="{% static 'img/loader.svg' %}" class="loader animate__animated animate__fadeInUp" >
+      <div class="spinner">
+
+      </div>
+    </div>
+
+    
+
+
+      <div class="whole">
+        
+        {% block content   %}
+
+
+
+
+
+
+
+
+        {% endblock %}
+
+          
+
+      </div>
+
+   
+    {% include 'script.html' %}
+  </body>
+</html>

@@ -1,0 +1,90 @@
+{% load static %}
+    <!-- Optional JavaScript; choose one of the two! -->
+
+        <!-- Option 1: Bootstrap Bundle with Popper -->
+   
+    <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.5.0/build/ol.js"></script>
+    <script src="{% static 'js/script.js' %}"></script>
+     <script src="{% static 'js/aos.js' %}"></script>
+
+  {% block scriptnav %}
+
+  {% endblock %}
+
+     <script>
+
+      
+
+let spinnerWrapper = document.querySelector('.spinner-wrapper');
+let whole = document.querySelector('.whole');
+let titulo = document.querySelector('.tituloHeader');
+let subtitulo = document.querySelector('.subtituloHeader');
+let btnHeader = document.querySelector('.btnHeader');
+
+
+window.addEventListener('load', function() {
+      
+ 
+ 
+  setTimeout(() => {
+   
+    spinnerWrapper.style.display= 'none'; 
+    whole.style.visibility = 'visible';
+    whole.style.opacity = '1';
+    
+    if (typeof navbar !== "undefined"){
+      navbar.classList.add("fixed-top");
+      titulo.classList.add("animate__animated");
+      subtitulo.classList.add("animate__animated");
+      btnHeader.classList.add("animate__animated");
+      titulo.classList.add("animate__delay-.5s");
+      subtitulo.classList.add("animate__delay-.5s");
+      btnHeader.classList.add("animate__delay-.5s");
+      titulo.classList.add("animate__fadeInDown");
+      subtitulo.classList.add("animate__fadeInRight");
+      btnHeader.classList.add("animate__fadeInUp");
+
+    }
+    
+ 
+  
+  }, 1500);  
+  
+  
+    AOS.init();
+
+    AOS.init({
+  // Global settings:
+  disable: ['mobile', 'tablet'], // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+  startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
+  initClassName: 'aos-init', // class applied after initialization
+  animatedClassName: 'aos-animate', // class applied on animation
+  useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+  disableMutationObserver: false, // disables automatic mutations' detections (advanced)
+  debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+  throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+
+
+  // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+  offset: 200, // offset (in px) from the original trigger point
+  delay: 300, // values from 0 to 3000, with step 50ms
+  duration: 900, // values from 0 to 3000, with step 50ms
+  easing: 'linear', // default easing for AOS animations
+  once: false, // whether animation should happen only once - while scrolling down
+  mirror: false, // whether elements should animate out while scrolling past them
+  anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
+
+
+
+
+
+  });
+
+});
+
+
+
+
+     
+     </script>

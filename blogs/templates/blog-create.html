@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block content %}
+  {% include 'header-blog.html' %}
+  <section class="blogCreate py-5 bg-primary" id="blogCreate" style="min-height: 80vh;">
+  <div class="container-fluid" >
+    <div class="row">
+      <!-- Latest Posts -->
+      <main class="post blog-post col-lg-12"> 
+        <div class="container bg-light roundedDiv py-3">
+            <h1>Create new blog!</h1>
+            <div class="container-fluid py-5">
+            <form method="POST" action=".">{% csrf_token %}
+                {{form.as_p}}
+                <button type = "submit" class="btn btn-success btn-large">CREAR</button>
+            </form>
+            </div>
+            
+
+
+            </div>
+          </div>
+        </div>
+      </main>
+    </section>
+
+  {% include 'footer.html' %}
+  
+{% endblock %}

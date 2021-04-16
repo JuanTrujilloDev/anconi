@@ -1,0 +1,58 @@
+{% load static %}
+<section class="blog-list py-5 bg-primary" id="blog-list" style="min-height: 80vh;">
+<div class="container">
+    <div class="row">
+      <!-- Latest Posts -->
+      <main class="posts-listing col-lg-8"> 
+        <div class="container">
+          <div class="row bg-light roundedDiv">
+            <h1 class="pt-5 text-center">Anconi <strong>Blog</strong></h1>
+            <h3 class="text-muted text-center pb-5">Todos mis blogs:</h3>
+            <!-- post -->
+          {% for blog in object_list %}
+            <div class="post col-xl-6 ">
+              <div class="post-thumbnail"><a href="{{blog.get_absolute_url}}"><img src="{{ blog.image.url }}" alt="..." class="img-fluid"></a></div>
+              <div class="post-details">
+                <div class="post-meta d-flex justify-content-between">
+                  <div class="category d-flex justify-content-end"><a href="#">{{blog.categoria}}</a> </div>
+                </div><a href="post.html">
+                  <h3 class="h4">{{blog.titulo}}</h3></a>
+                <p class="text-muted">{{blog.descripcion}}</p>
+                <footer class="post-footer d-flex align-items-center"><a href="#" class="author d-flex align-items-center flex-wrap">
+                    <div class="title"><span>{{blog.autor}}</span></div></a>
+                  <div class="date"><i class="fa fa-clock"></i> {{blog.fecha|date:'d-M, Y'}}</div>
+                </footer>
+              </div>
+            </div>
+          {% endfor %}
+            <!-- post             -->
+     
+
+            <ul class="pagination justify-content-center py-3">
+              <li class="page-item">
+                <a class="page-link" href="#" aria-label="Previous">
+                  <span aria-hidden="true">&laquo;</span>
+                  <span class="sr-only">Previous</span>
+                </a>
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="#">1</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="#">2</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="#">3</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="#" aria-label="Next">
+                  <span aria-hidden="true">&raquo;</span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          
+        </div>
+      </main>
+  

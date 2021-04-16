@@ -1,0 +1,20 @@
+from django.contrib import admin
+from .models import Portafolio, Categoria
+
+# Register your models here.
+class PortafolioAdmin(admin.ModelAdmin):
+    readonly_fields = ("fecha", "slug")
+    list_display = ("titulo", "categoria", "fecha")
+    ordering = ("categoria", "fecha")
+    search_fields = ("titulo", "categoria__titulo")
+    date_hierarchy = "fecha"
+
+    list_filter = ("categoria__titulo", "fecha")
+
+
+
+class CategoriaAdmin(admin.ModelAdmin):
+    readonly_fields = ("created", )
+
+admin.site.register(Portafolio, PortafolioAdmin)
+admin.site.register(Categoria)

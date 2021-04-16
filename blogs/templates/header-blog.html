@@ -1,0 +1,46 @@
+{% load static %}
+{% block css %} <link rel="stylesheet" href="{% static 'css/blogstyles.css' %}">  
+                <script src="{% static 'js/script-blog.js' %}"></script>{% endblock css %}
+<section class="headerBlog" id="headerBlog">
+	
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="collapse navbar-collapse w-100 order-1 order-lg-0 " id="navbarCollapse">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link {% if request.path == '/' %} active {% endif %}" href="{% url 'home-view' %}">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {% if request.path == '/blog/' %} active {% endif %}" href="{% url 'blog-view' %}">Blogs</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {% if request.path == '/portfolio/' %} active {% endif %}" href="{% url 'portfolio-view' %}">Portafolio</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle {% if '/users/' in request.path or 'create' in request.path %} active {% endif %}" href="#" id="dropdown01" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Admin</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdown01">
+                      <a class="dropdown-item text-dark" href="{% url 'edit-view' %}">Cuenta</a>
+                      <a class="dropdown-item text-dark" href="{% url 'blog-create' %}">Crear blog</a>
+                      <a class="dropdown-item text-dark" href="{% url 'portfolio-create' %}">Crear portafolio</a>
+                    </div>
+              
+                  </li>
+                <li class="nav-item">
+                    <a class="nav-link btn-lg btn-message text-uppercase" href="{% url 'home-view' %}#contact">CONTRATAR</a>
+                </li>
+               
+            </ul>
+        </div>
+        <div class="d-flex w-100 order-0">
+            <div class="w-100">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+            </div>
+            <a class="navbar-brand text-center w-100" href="#"><img class="logo2"></a>
+            <span class="w-100"></span>
+        </div>
+        <span class="w-100"></span>
+    </nav>
+
+
+  </section>

@@ -1,0 +1,610 @@
+/* COLORES Y TOOOLS */
+
+.btn-secondary{
+    background-color: #6D8DCD;
+}
+
+.whole{
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.5s linear, opacity 1s linear;
+}
+
+.spinner-wrapper{
+    z-index: 100;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #60555D;
+    display: flex;
+    flex-direction: column;
+    --animate-duration: 2s;
+  --animate-delay: 1s;
+}
+
+.spinner-wrapper > .loader{
+    max-width: 15vh;
+    max-height: 15vh;
+}
+
+.spinner-wrapper > .loader-logo{
+    max-width: 40vh;
+    max-height: 40vh;
+}
+
+
+html, body{
+    
+    overflow-x:hidden;
+    overflow-wrap: break-word;
+    scroll-behavior: smooth;
+    
+
+}
+
+.btn{
+    font-weight: bold;
+    overflow-wrap: break-word;
+}
+
+.text-justify{
+    text-align: justify;
+}
+
+p{
+    font-size:18px;
+    font-family: 'GlacialIndifferenceRegular';
+    font-weight:lighter;
+    overflow-wrap: break-word;
+}
+
+h1{
+font-size: 3rem;
+font-family: 'Fahkwang';
+overflow-wrap: break-word;
+}
+
+h2, h3, h4, h5, h6 {
+    font-weight: 300;
+    font-family: 'GlacialIndifferenceRegular';
+    overflow-wrap: break-word;
+}
+
+body{
+    position:relative;
+}
+
+.bg-dark{
+    background-color: #f6f6f6!important;
+}
+
+.bg-custom{
+    background:transparent
+}
+
+.btn-primary{
+    background: linear-gradient(90deg, rgba(209,143,143,1) 36%, rgba(217,206,214,1) 90%);;
+    border-color: rgba(209,143,143,1);
+    transition: all 0.2s ease-in-out;
+    color:#ffffff;
+}
+
+.btn-primary:hover{
+    border: 1px solid rgb(255, 154, 171);
+    color: rgba(255, 255, 255, 1);
+    box-shadow: 0 5px 10px rgb(255, 154, 171);
+    transition: all 0.2s ease-in-out;
+}
+
+.text-primary{
+    color:rgba(209,143,143,1)!important;
+}
+
+.text-cafe{
+    color:#60555D;
+}
+
+.bg-primary{
+    background-color: #60555D!important;
+}
+
+.bg-gradient{
+    background: linear-gradient(90deg, rgba(209,143,143,1) 36%, rgba(217,206,214,1) 90%)!important;;
+}
+
+.btn-message{
+    background: rgba(209,143,143,1);
+    transition: all 0.2s ease-in-out;
+    color:#ffffff;
+}
+
+.btn-message:hover{
+    border: 1px solid rgb(255, 154, 171);
+    color: rgba(255, 255, 255, 1);
+    box-shadow: 0 5px 10px rgb(255, 154, 171);
+    transition: all 0.2s ease-in-out;
+}
+
+.bg-white{
+    background: #e2e2e2;
+}
+
+.roundedDiv{
+    
+    border-radius: 15px;
+-moz-border-radius: 15px;
+}
+
+.marcas{
+    pointer-events: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*        END COLORES Y TOOLS     */
+
+
+
+
+
+/*     NAVBAR         */
+
+
+body{
+    background: black;
+}
+
+hr{
+    width: 170px;
+    height: 4px!important;
+    background: rgb(255, 154, 171);
+    border: none;
+    display: block;
+    unicode-bidi: isolate;
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    overflow: hidden;
+    border-style: inset;
+    border-width: 1px;
+    opacity: 1;
+}
+
+.navbar .active{
+    color:rgb(226, 114, 114)!important;
+}
+
+
+
+.navbar{
+    padding-left: 5%;
+    padding-right: 5%;
+    background-color: transparent;
+    transition: 1s;
+    width:100%;
+}
+
+.navbar a{
+    font-size: 18px;
+}
+
+.navbar .link{
+    color:white;
+}
+
+.navbar .btn-custom{
+    color:white!important;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.navbar.scrolled {
+    background-color: #eeeeee !important;
+    transition: background-color 0.2s linear;
+  }
+.navbar-brand img{
+    max-width:120px;
+    max-height:45px;
+    content: url("../img/anconi.png");
+    transition: 0.2s linear;
+}
+
+.navbar-toggler-icon{
+    color:white;
+}
+
+.scrolled > .navbar-toggler-icon{
+    color:black!important;
+}
+
+.navbar-toggler:focus{
+    box-shadow: 0 5px 15px rgb(226, 114, 114) !important;
+}
+
+.navbar-toggler{
+    border-color: white;
+}
+
+.scrolled .navbar-toggler{
+    border-color:#303437!important;
+}
+
+.logo2{
+    content:url('../img/anconi2.png')!important;
+    transition: 0.2s linear;
+}
+
+.navbar.scrolled .link{
+    color: black;
+}
+
+.navbar.scrolled .active{
+    color: rgb(221, 112, 112);
+}
+
+.navbar-dark .navbar-nav .nav-link {
+     color: white;
+}
+
+  
+
+.navbar a{
+    justify-content: space-between;
+    padding: 10px 0 10px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    white-space: nowrap;
+    transition: 0.3s;
+}
+
+.navbar .link:hover{
+    color:rgba(209,143,143,1);
+}
+
+.navbar .active{
+    color:rgba(209,143,143,1);
+    
+}
+
+@media (max-width: 768px){
+    .navbar{
+    background-color: #303437;
+    text-align: center;
+    justify-content: center;
+    }
+
+    .btn-custom{
+        margin-left:0!important;
+    }
+    
+}
+
+.btn-custom{
+    background: rgb(226, 114, 114);;
+    padding: 8px 20px;
+    margin-left: 20px;
+    border-radius: 4px;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 5px 15px rgb(226, 114, 114);}
+
+.btn-custom:hover{
+    color: rgb(226, 114, 114);;
+    background-color: rgb(255, 255, 255);;
+    box-shadow: 0 5px 15px rgb(240, 65, 65);
+}
+
+
+    .header {
+        height: 100vh!important;
+        min-height: 500px;
+        background-image: url('https://cdn.pixabay.com/photo/2016/11/29/10/10/girl-1868930_960_720.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        
+      }
+
+
+/*      END NAVBAR         */  
+
+
+/* MARCAS */
+  /*jssor slider loading skin spin css*/
+  .jssorl-009-spin img {
+    animation-name: jssorl-009-spin;
+    animation-duration: 1.6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes jssorl-009-spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+
+.marcas{
+    overflow:hidden;
+}
+
+.jssorl-009-spin img {
+    animation-name: jssorl-009-spin;
+    animation-duration: 1.6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes jssorl-009-spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* END MARCAS */
+
+/* SERVICIOS */
+.custom-shape-divider-top-1616629040 {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-top-1616629040 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 150px;
+}
+
+.custom-shape-divider-top-1616629040 .shape-fill {
+    fill: #f6f6f6;
+}
+
+
+.custom-shape-divider-bottom-1616616631 {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1616616631 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 100px;
+}
+
+.custom-shape-divider-bottom-1616616631 .shape-fill {
+    fill: #f6f6f6;
+}
+
+.circulo{
+    color:rgba(209,143,143,1);
+    transition: .5s ;
+}
+
+.elemento{
+    color:#D9CED6;
+    transition: .5s ease;
+}
+
+#servicios span:hover .elemento{
+    color:#f1a3a3;
+    transform: scale(1.2);
+    transition: .5s ease;
+}
+
+#servicios span:hover .circulo{
+    color:#D9CED6;
+    transition: .5s ease;
+}
+
+
+/* END SERVICIOS    */
+
+
+/* PORTFOLIO   */
+
+
+
+.portafolio .innerContent{
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.imageCenter{
+    clip-path: polygon(0 0, 4% 0, 50% 11%, 96% 0, 100% 0, 100% 100%, 0 100%);
+}
+
+@media(max-width:767px){
+    .imageCenter{
+        clip-path:none;
+    }
+}
+
+.portafolio img{
+    transition: 1s ;
+}
+
+.portafolio a:hover img{
+    filter: blur(4px);
+    transition: 1s ;
+    
+}
+.overlay {
+    position: absolute;
+    bottom: 0;
+    background: #60555D;
+    background: #60555D; /* Black see-through */
+    color: #f1f1f1;
+    width: 100%;
+    transition: .5s ease;
+    opacity:0;
+    color: white;
+    font-size: 20px;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  /* When you mouse over the container, fade in the overlay title */
+  .portafolio a:hover .overlay {
+    opacity: 1;
+  }
+
+  .imageContainer{
+    position: relative;
+    text-align: center;
+  }
+
+
+/* TEAM */
+
+
+/* END TEAM */
+
+/* MAP  */
+.map {
+    height: 400px;
+    width: 100%;
+  }
+
+/* END MAP */
+
+/*    CONTACT     */
+
+.contactInfo{
+    max-height: 350px;
+}
+
+.contact-info .fa {
+    padding-right: 5px;
+  }
+  
+  #contact .form-control {
+    border: none;
+    border-bottom: 2px solid #ffe1e1;
+    border-radius: 0px;
+    box-shadow: none;
+    font-size: 18px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    -webkit-transition: all ease-in-out 0.4s;
+    transition: all ease-in-out 0.4s;
+  }
+  
+  #contact .form-control:focus {
+    border-bottom-color: #999999;
+  }
+  
+  #contact input {
+    height: 55px;
+  }
+
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+textarea {
+    resize: none;
+  }
+
+
+
+/*      END CONTACT     */
+
+
+
+/* FOOTER */
+.footer{
+    background-color: black;
+}
+  
+
+
+/* END FOOTER */
+
+
+
+
+/*  LOGIN       */
+
+.card-signin {
+    border: 0;
+    border-radius: 1rem;
+    box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-signin .card-title {
+    margin-bottom: 2rem;
+    font-weight: 300;
+    font-size: 1.5rem;
+  }
+  
+  .card-signin .card-body {
+    padding: 2rem;
+  }
+  
+  .form-signin {
+    width: 100%;
+  }
+  
+  .form-signin .btn {
+    font-size: 80%;
+    border-radius: 5rem;
+    letter-spacing: .1rem;
+    font-weight: bold;
+    padding: 1rem;
+    transition: all 0.2s;
+  }
+  
+  .form-label-group {
+    position: relative;
+    margin-bottom: 1rem;
+ }
+  
+ 
+  
+  .btn-google {
+    color: white;
+    background-color: #ea4335;
+  }
+  
+  .btn-facebook {
+    color: white;
+    background-color: #3b5998;
+  }
+  
+.logo-login{
+    max-width: 20vh;
+}
