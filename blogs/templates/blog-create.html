@@ -7,11 +7,16 @@
       <!-- Latest Posts -->
       <main class="post blog-post col-lg-12"> 
         <div class="container bg-light roundedDiv py-3">
-            <h1>Create new blog!</h1>
+          {% if 'create' in request.path %} 
+            <h1>Create new post!</h1>
+          {% else %}
+            <h1>Update blog: {{object.titulo}}</h1>
+            <img class="img-fluid justify-content-between align-center " src="{{object.image.url}}">
+          {% endif %}
             <div class="container-fluid py-5">
-            <form method="POST" action=".">{% csrf_token %}
+            <form method="POST" action="." enctype="multipart/form-data">{% csrf_token %}
                 {{form.as_p}}
-                <button type = "submit" class="btn btn-success btn-large">CREAR</button>
+                <button type = "submit" class="btn btn-success btn-large"> {% if 'create' in request.path %} CREAR {% else %} EDITAR {% endif %}</button>
             </form>
             </div>
             

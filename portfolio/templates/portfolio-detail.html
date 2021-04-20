@@ -5,65 +5,50 @@
 <section class="bg-primary py-5">
 <!-- Page Content -->
 <div class="container bg-light roundedDiv py-2">
-    <a class="btn btn-secondary" ><i class="fa fa-home"></i></a> 
+    <a class="btn btn-secondary" href="{% url 'portfolio-view' %}"><i class="fas fa-arrow-left"></i></a> 
     <!-- Portfolio Item Heading -->
-    <h1 class="my-4">Page Heading
-      <small>Secondary Text</small>
+    <h1 class="my-4">{{object.titulo}}
     </h1>
   
     <!-- Portfolio Item Row -->
     <div class="row">
   
       <div class="col-md-8">
-        <img class="img-fluid" src="http://placehold.it/750x500" alt="">
+        <img class="img-fluid" src="{{object.image.url}}" alt="">
       </div>
   
       <div class="col-md-4">
-        <h3 class="my-3">Project Description</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae. Sed dui lorem, adipiscing in adipiscing et, interdum nec metus. Mauris ultricies, justo eu convallis placerat, felis enim.</p>
-        <h3 class="my-3">Project Details</h3>
+        <h3 class="my-3">Descripcion del producto:</h3>
+        <h5>{{object.descripcion|linebreaks}}</h5>
+        <h3 class="my-3">Categoria:</h3>
         <ul>
-          <li>Lorem Ipsum</li>
-          <li>Dolor Sit Amet</li>
-          <li>Consectetur</li>
-          <li>Adipiscing Elit</li>
+          <li><h5>{{object.categoria.titulo}}</h5></li>
         </ul>
-        <a class="btn btn-warning" ><i class="fa fa-home"></i></a> <a class="btn btn-danger" ><i class="fa fa-home"></i></a>
+        {% if request.user.is_authenticated %}
+        <a class="btn btn-warning" href="{% url 'portfolio-update' slug=object.slug %}" ><i class="fas fa-edit"></i></a> 
+        <a class="btn btn-danger" ><i class="far fa-trash-alt"></i></a>
+        {% endif %}
       </div>
   
     </div>
     <!-- /.row -->
   
     <!-- Related Projects Row -->
+    {% if related %}
     <h3 class="my-4">Related Projects</h3>
   
     <div class="row">
-  
+    {% for item in related %}
       <div class="col-md-3 col-sm-6 mb-4">
-        <a href="#">
-              <img class="img-fluid" src="http://placehold.it/500x300" alt="">
+        <a href="{{item.get_absolute_url}}">
+              <img class="img-fluid" src="{{item.image.url}}" alt="">
             </a>
       </div>
+    {% endfor %}
   
-      <div class="col-md-3 col-sm-6 mb-4">
-        <a href="#">
-              <img class="img-fluid" src="http://placehold.it/500x300" alt="">
-            </a>
-      </div>
-  
-      <div class="col-md-3 col-sm-6 mb-4">
-        <a href="#">
-              <img class="img-fluid" src="http://placehold.it/500x300" alt="">
-            </a>
-      </div>
-  
-      <div class="col-md-3 col-sm-6 mb-4">
-        <a href="#">
-              <img class="img-fluid" src="http://placehold.it/500x300" alt="">
-            </a>
-      </div>
   
     </div>
+  {% endif %}
     <!-- /.row -->
   
   </div>

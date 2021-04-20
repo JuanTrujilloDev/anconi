@@ -6,8 +6,8 @@
         <h3 class="h6">Funciones blog: SOLO EN LOS DETALLES DE BLOG</h3>
       </header>
       <ul class="list-inline">
-        <li class="list-inline-item mt-2"><a href="{% url 'blog-create' %}" class="btn btn-warning">Editar blog</a></li>
-        <li class="list-inline-item mt-2"><a href="#" class="btn btn-danger">Eliminar blog</a></li>
+        <li class="list-inline-item mt-2"><a href="{% url 'blog-update' slug=object.slug %}" class="btn btn-warning">Editar blog</a></li>
+        <li class="list-inline-item mt-2"><a href="{% url 'blog-delete' slug=object.slug %}" class="btn btn-danger">Eliminar blog</a></li>
 
       </ul>
     </div>
@@ -19,9 +19,9 @@
       </header>
       <ul class="list-inline">
         <li class="list-inline-item mt-2"><a href="{% url 'blog-create' %}" class="btn btn-primary">Crear nuevo blog</a></li>
-        <li class="list-inline-item mt-2"><a href="#" class="btn btn-primary">Editar cuenta</a></li>
-        <li class="list-inline-item mt-2"><a href="#" class="btn btn-primary">Ir al admin</a></li>
-        <li class="list-inline-item mt-2"><a href="#" class="btn btn-primary">Ir al dashboard</a></li>
+        <li class="list-inline-item mt-2"><a href="{% url 'users-edit' %}" class="btn btn-primary">Editar cuenta</a></li>
+        <li class="list-inline-item mt-2"><a href="{% url 'admin:index' %}" class="btn btn-primary">Ir al admin</a></li>
+        <li class="list-inline-item mt-2"><a href="{% url 'portfolio-create' %}" class="btn btn-primary">Crear nuevo producto</a></li>
 
       </ul>
     </div>
@@ -30,9 +30,9 @@
       <header>
         <h3 class="h6">Search the blog</h3>
       </header>
-      <form action="#" class="search-form">
+      <form action="{% url 'blog-search' %}" method="GET" class="search-form">{% csrf_token %}
         <div class="form-group">
-          <input type="search" placeholder="What are you looking for?">
+          {{search.as_p}}
           <button type="submit" class="submit"><i class="fa fa-search"></i></button>
         </div>
       </form>
@@ -64,7 +64,7 @@
       </header>
       <ul class="list-inline">
       {% for tag in categorias %}
-        <li class="list-inline-item"><a href="#" class="tag">#{{tag.titulo}}</a></li>
+        <li class="list-inline-item"><a href="{% url 'category-view' slug=tag.slug %}" class="tag">#{{tag.titulo}}</a></li>
       {% endfor %}
       </ul>
     </div>

@@ -19,5 +19,5 @@ from .views import edit, login
 
 urlpatterns = [
     path('login', login, name="login-view"),
-    path('edit', edit, name="edit-view"),
+    path('edit', edit, name="users-edit"),
 ]

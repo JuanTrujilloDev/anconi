@@ -12,7 +12,12 @@
     
     
     <!-- Google fonts-->
-    <title>Hello, world!</title>
+    <title>{% if tittle %}
+            {{tittle}}
+            {% else %}
+            Anconi - Moda y Dotaciones.
+            {% endif %}
+    </title>
   </head>
   <body>
     <!--TOP HEADER-->

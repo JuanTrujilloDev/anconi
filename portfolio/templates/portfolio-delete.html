@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block content %}
+  {% include 'header-blog.html' %}
+  <section class="blogCreate py-5 bg-primary" id="blogCreate" style="min-height: 80vh;">
+  <div class="container-fluid" >
+    <div class="row">
+      <!-- Latest Posts -->
+      <main class="post blog-post col-lg-12"> 
+        <div class="container bg-light roundedDiv py-3">
+
+            <h1 class="text-danger">Delete producto: {{object.titulo}}</h1>
+            <img class="img-fluid justify-content-between align-center " src="{{object.image.url}}">
+
+            <div class="container-fluid py-5">
+            <form method="POST" action="." enctype="multipart/form-data">{% csrf_token %}
+                <h4>Estas segur@ que quieres <strong>ELIMINAR</strong> el producto: {{object.titulo}}</h4>
+                <button type = "submit" class="btn btn-danger btn-large">ELIMINAR</button> <a href="{% url 'portfolio-detail' slug=object.slug %}" class="btn btn-warning btn-large">CANCELAR</a>
+            </form>
+            </div>
+            
+
+
+            </div>
+          </div>
+        </div>
+      </main>
+    </section>
+
+  {% include 'footer.html' %}
+  
+{% endblock %}

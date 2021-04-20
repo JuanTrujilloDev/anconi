@@ -18,7 +18,8 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle {% if '/users/' in request.path or 'create' in request.path %} active {% endif %}" href="#" id="dropdown01" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Admin</a>
                     <div class="dropdown-menu" aria-labelledby="dropdown01">
-                      <a class="dropdown-item text-dark" href="{% url 'edit-view' %}">Cuenta</a>
+                        <a class="dropdown-item text-dark" href="{% url 'admin:index' %}">Admin</a>
+                      <a class="dropdown-item text-dark" href="{% url 'users-edit' %}">Cuenta</a>
                       <a class="dropdown-item text-dark" href="{% url 'blog-create' %}">Crear blog</a>
                       <a class="dropdown-item text-dark" href="{% url 'portfolio-create' %}">Crear portafolio</a>
                     </div>

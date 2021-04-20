@@ -1,10 +1,11 @@
 
 from django.urls import path
-from .views import portfolio, portfolioCreate, portfolioDetail
+from .views import PortfolioUpdate, PortfolioView, PortfolioCreate, PortfolioDetail
 
 urlpatterns = [
-    path('', portfolio, name="portfolio-view"),
-    path('detail', portfolioDetail, name="portfolio-detail"),
-    path('create', portfolioCreate, name="portfolio-create"),
+    path('', PortfolioView.as_view(), name="portfolio-view"),
+    path('detail/<slug:slug>/', PortfolioDetail.as_view(), name="portfolio-detail"),
+    path('update/<slug:slug>/', PortfolioUpdate.as_view(), name="portfolio-update"),
+    path('create/', PortfolioCreate.as_view() , name="portfolio-create"),
 
 ]
